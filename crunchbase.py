@@ -36,7 +36,7 @@ class crunchbase:
   def getCompanyData(self, name):
     '''This returns the data about a company in JSON format.'''
 
-    result = self.__getJsonData("company", name)
+    result = self.__getJsonData("company", "/" + name)
     return result
 
   def getPersonData(self, firstName, lastName):
