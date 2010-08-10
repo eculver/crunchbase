@@ -54,7 +54,7 @@ class crunchbase:
   def getProductData(self, name):
     '''This returns the data about a product in JSON format.'''
 
-    result = self.__getJsonData("product", name)
+    result = self.__getJsonData("product", "/" + name)
     return result
 
   def getServiceProviderData(self, name):
