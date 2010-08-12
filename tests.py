@@ -15,8 +15,7 @@ from crunchbase import crunchbase
 class TestCrunchbase(unittest.TestCase):
     # known resources
     COMPANY = "techcrunch"
-    PERSON_FIRST_NAME = "michael"
-    PERSON_LAST_NAME = "arrington"
+    PERSON = "michael-arrington"
     FINANCIAL_ORG = "sequoia-capital"
     PRODUCT = "crunchbase"
     SERVICE_PROVIDER = "verisign"
@@ -38,7 +37,7 @@ class TestCrunchbase(unittest.TestCase):
         
     def test_get_person_data(self):
         """Grab person data and make sure it's non-empty and JSON"""
-        json = self.api.getPersonData(self.PERSON_FIRST_NAME, self.PERSON_LAST_NAME)
+        json = self.api.getPersonData(self.PERSON)
         self.assertNotEqual(json, "")
         simplejson.loads(json)
         return True
